@@ -62,7 +62,7 @@ task :deploy => :environment do
     invoke :'rails:assets_precompile'
 
     to :launch do
-      queue "touch #{deploy_to}/tmp/restart.txt"
+      queue "sudo bluepill restart"
     end
 
   end
