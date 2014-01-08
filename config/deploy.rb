@@ -75,3 +75,6 @@ end
 #  - http://nadarei.co/mina/settings
 #  - http://nadarei.co/mina/helpers
 
+task :logs do
+  queue 'echo "Hello"'
+end
