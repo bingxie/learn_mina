@@ -62,7 +62,7 @@ task :deploy => :environment do
     invoke :'rails:assets_precompile'
 
     to :launch do
-      queue "sudo bluepill restart"
+      queue "eye restart learn_mina"  # specify the process name
     end
 
   end
@@ -77,4 +77,11 @@ end
 
 task :logs do
   queue 'echo "Hello"'
+  queue! 'true'
+
+  puts commands
+end
+
+task :health do
+  queue 'eye info'
 end
